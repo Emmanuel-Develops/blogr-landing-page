@@ -15,6 +15,7 @@ html, body {
 }
 
 body {
+    font-family: "Ubuntu", 'sans';
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
@@ -36,6 +37,17 @@ li {
   list-style: none;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    border: none;
+    color: inherit;
+    background: none;
+}
+
 *:root {
     --mobile: 375px;
     --desktop: 1440px;
@@ -55,8 +67,6 @@ li {
 .header-wrapper {
     position: relative;
     background: linear-gradient(to right, var(--lighter-red), var(--light-red));
-    /* width: 100%; */
-    /* height: 92vh;  */
     padding: 2rem;
     border-bottom-left-radius: 5.5rem;
     overflow: hidden;
@@ -78,7 +88,189 @@ li {
     }
 }
 
-.menu-wrapper {
-  position: relative;
-  z-index: 1;
+
+.flex {
+    display: flex;
 }
+
+nav {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+@media screen and (min-width: 765px) {
+    nav {
+        /* align-items: center; */
+    }
+}
+
+.menu-wrapper {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  /* outline: 2px solid green; */
+}
+.menu-wrapper .hamburger-container {
+    order: 1;
+    display: block;
+    margin-left: auto;
+}
+.menu-wrapper .menu-links, .cta-btn-group.menu-btn {
+    display: flex;
+    flex-direction: column;
+    /* gap: 2rem; */
+}
+.menu-wrapper .menu-links {
+    padding: 1rem;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: white;
+    border-radius: 4px;
+    color: black;
+    margin: 0 auto;
+}
+.menu-wrapper .menu-links li {
+    position: relative;
+    height: auto;
+    /* outline: 2px solid green; */
+    
+}
+.menu-wrapper .menu-links li .dropdown-arrow {
+    width: 12px;
+    fill: green !important;
+    color: red !important;
+}
+.menu-wrapper .menu-links li .dropdown-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-weight: 600;
+    color: black;
+    min-width: 200px;
+}
+
+.dropdown-menu {
+    position: relative;
+    min-width: 100px;
+    /* left: -25%; */
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+    background-color: white;
+    height: 0;
+    display: none;
+}
+.dropdown-menu li:hover {
+    font-weight: 600;
+}
+.menu-wrapper .menu-links li:active .dropdown-menu, .menu-wrapper .menu-links li:hover .dropdown-menu {
+    transform: scale(1);
+    display: block;
+    visibility: visible;
+    height: auto;
+}
+@media screen and (min-width: 765px) {
+    .menu-wrapper .hamburger-container {
+        display: none;
+    }
+    .menu-wrapper .menu-links, .cta-btn-group.menu-btn {
+        flex-direction: row;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    .menu-wrapper .menu-links {
+        position: static;
+        background-color: none;
+        padding: 0;
+    }
+    .menu-wrapper .menu-links li {
+        position: relative;
+        height: auto;
+    }
+    .menu-wrapper .menu-links li .dropdown-link {
+        min-width: unset;
+        color: white;
+    }
+    .dropdown-menu {
+        position: absolute;
+        min-width: 100px;
+        left: -25%;
+        border-radius: 8px;
+        padding: 1rem 1.5rem;
+        background-color: white;
+        transform: scaleY(0);
+    }
+}
+
+.heading-text {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    margin: 6rem auto;
+    color: white;
+}
+.heading-text .hero-text {
+    font-family: "OverPass", sans;
+    font-size: 3.2rem;
+    font-weight: 800;
+}
+.heading-text .hero-sub-text {
+    font-family: "OverPass", sans;
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+.heading-text .cta-btn-group {
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+}
+.cta-btn-group {
+    display: flex;
+    gap: 1rem;
+}
+.cta-btn-group .cta-btn {
+    border: 2px solid white;
+    font-weight: 600;
+    transition: all 200ms ease-in;
+    transition-property: border, background-color, color;
+}
+.cta-btn-group .cta-btn:hover {
+    background-color: white;
+    color: var(--light-red);
+}
+
+.cta-btn-group .cta-btn.btn-filled{
+    background-color: white;
+    color: var(--light-red);
+}
+.cta-btn-group .cta-btn.btn-nofill{
+    border: 2px solid transparent;
+}
+.cta-btn-group .cta-btn.btn-nofill:hover{
+    border: 2px solid white;
+    background-color: transparent;
+    color: white;
+}
+.cta-btn-group .cta-btn.btn-filled:hover {
+    border: 2px solid var(--red-200);
+    background-color: var(--red-200);
+    color: white;
+}
+
+.cta-btn {
+    border-radius: 999px;
+    padding: 0.65rem 1rem;
+    color: white;
+    white-space: nowrap;
+}
+
+.content-spacing {
+    margin: 0 auto;
+    max-width: 1024px;
+}
+

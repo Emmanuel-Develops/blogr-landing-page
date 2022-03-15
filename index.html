@@ -22,14 +22,16 @@
                 </div>
                 <!-- <div>f</div>\ -->
                 <div class="menu-wrapper">
-                    <div class="hamburger-container">
-                        <img src="/assets/icon-hamburger.svg" alt="hamburger menu">
-                    </div>
+                    <div class="hamburger-container"></div>
                     <ul class="menu-links">
                         <li>
                             <div class="dropdown-link">
                                 <a href="#">Product</a>
-                                <img class="dropdown-arrow" src="/assets/icon-arrow-light.svg" alt="dropdown">
+                                <picture>
+                                    <source media="(min-width: 766px)" srcset="/assets/icon-arrow-light.svg" class="dropdown-arrow">
+                                    <source media="(max-width: 765px)" srcset="/assets/icon-arrow-dark.svg" class="dropdown-arrow">
+                                    <img class="dropdown-arrow" src="/assets/icon-arrow-light.svg" alt="dropdown">
+                                </picture>
                             </div>
                             <ul class="dropdown-menu">
                                 <li><a href="#">Overview</a></li>
@@ -42,7 +44,11 @@
                         <li>
                             <div class="dropdown-link">
                                 <a href="#">Company</a>
-                                <img class="dropdown-arrow" src="/assets/icon-arrow-light.svg" alt="dropdown">
+                                <picture>
+                                    <source media="(min-width: 766px)" srcset="/assets/icon-arrow-light.svg" class="dropdown-arrow">
+                                    <source media="(max-width: 765px)" srcset="/assets/icon-arrow-dark.svg" class="dropdown-arrow">
+                                    <img class="dropdown-arrow" src="/assets/icon-arrow-light.svg" alt="dropdown">
+                                </picture>
                             </div>
                             <ul class="dropdown-menu">
                                 <li><a href="#">About</a></li>
@@ -54,7 +60,11 @@
                         <li>
                             <div class="dropdown-link">
                                 <a href="#">Connect</a>
-                                <img class="dropdown-arrow" src="/assets/icon-arrow-light.svg" alt="dropdown">
+                                <picture>
+                                    <source media="(min-width: 766px)" srcset="/assets/icon-arrow-light.svg" class="dropdown-arrow">
+                                    <source media="(max-width: 765px)" srcset="/assets/icon-arrow-dark.svg" class="dropdown-arrow">
+                                    <img class="dropdown-arrow" src="/assets/icon-arrow-light.svg" alt="dropdown">
+                                </picture>
                             </div>
                             <ul class="dropdown-menu">
                                 <li><a href="#">Contact</a></li>
@@ -62,10 +72,15 @@
                                 <li><a href="#">LinkedIn</a></li>
                             </ul>
                         </li>
-                        <div class="cta-btn-group menu-btn">
-                            <button class="cta-btn btn-nofill">Login</button>
-                            <button class="cta-btn btn-filled">Sign Up</button>
-                        </div>
+                        <li>
+                            <div class="divider"></div>
+                        </li>
+                        <li>
+                            <div class="cta-btn-group menu-btn">
+                                <button class="cta-btn btn-nofill">Login</button>
+                                <button class="cta-btn btn-filled">Sign Up</button>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </nav>
@@ -79,6 +94,106 @@
             </div>
         </div>
     </header>
-    
+    <section class="future">
+        <div class="future-wrapper">
+          <h2 class="future-title">Designed for the future</h2>
+          <div class="future-img"></div>
+          <div class="future-infos">
+            <div class="future-info">
+              <h2 class="future-title">Introducing an extensible editor</h2>
+              <p class="future-desc">
+                Blogr features an exceedingly intuitive interface which lets you
+                focus on one thing: creating content. The editor supports
+                management of multiple blogs and allows easy manipulation of
+                embeds such as images, videos, and Markdown. Extensibility with
+                plugins and themes provide easy ways to add functionality or
+                change the looks of a blog.
+              </p>
+            </div>
+            <div class="future-info">
+              <h2 class="future-title">Robust content management</h2>
+              <p class="future-desc">
+                Flexible content management enables users to easily move through
+                posts. Increase the usability of your blog by adding customized
+                categories, sections, format, or flow. With this functionality,
+                you’re in full control.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="infrastructure">
+        <div class="infrastructure-wrapper">
+          <div class="floating-img">
+            <img
+              src="./assets/illustration-phones.svg"
+              alt="phone illustration"
+            />
+          </div>
+          <div class="text">
+            <h2 class="infrastructure-title">State of the Art Infrastructure</h2>
+            <p class="infrastructure-desc">
+              With reliability and speed in mind, worldwide data centers provide
+              the backbone for ultra-fast connectivity. This ensures your site
+              will load instantly, no matter where your readers are, keeping your
+              site competitive.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="benefits">
+        <div class="benefits-wrapper">
+          <div class="benefits-features">
+            <div class="benefits-feature">
+              <h2 class="benefits-title">Free, open, simple</h2>
+              <p class="benefits-desc">
+                Blogr is a free and open source application backed by a large
+                community of helpful developers. It supports features such as code
+                syntax highlighting, RSS feeds, social media integration,
+                third-party commenting tools, and works seamlessly with Google
+                Analytics. The architecture is clean and is relatively easy to
+                learn.
+              </p>
+            </div>
+            <div class="benefits-feature">
+              <h2 class="benefits-title">Powerful tooling</h2>
+              <p class="benefits-desc">
+                Batteries included. We built a simple and straightforward CLI tool
+                that makes customization and deployment a breeze, but capable of
+                producing even the most complicated sites.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="footer">
+        <div class="footer-wrapper">
+          <div class="footer-logo">
+            <img src="./assets/logo.svg" alt="logo" />
+          </div>
+          <div class="footer-links">
+            <h2 class="footer-links--title">Product</h2>
+            <a href="#" class="footer-link">Overview</a>
+            <a href="#" class="footer-link">Pricing</a>
+            <a href="#" class="footer-link">Marketplace</a>
+            <a href="#" class="footer-link">Features</a>
+            <a href="#" class="footer-link">Integrations</a>
+          </div>
+          <div class="footer-links">
+            <h2 class="footer-links--title">Company</h2>
+            <a href="#" class="footer-link">About</a>
+            <a href="#" class="footer-link">Team</a>
+            <a href="#" class="footer-link">Blog</a>
+            <a href="#" class="footer-link">Careers</a>
+          </div>
+          <div class="footer-links">
+            <h2 class="footer-links--title">Connect</h2>
+            <a href="#" class="footer-link">Contact</a>
+            <a href="#" class="footer-link">Newsletter</a>
+            <a href="#" class="footer-link">LinkedIn</a>
+          </div>
+        </div>
+      </footer>
 </body>
+<script src="./src/index.js"></script>
 </html>
